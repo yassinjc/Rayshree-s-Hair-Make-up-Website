@@ -1,0 +1,1724 @@
+/* Basis styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+    --textbruin: #574035;
+    --accentbruin: #B47E65;
+    --offwhite: #FCFAF9;
+    --darkbruin: #14100E;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* De navigatiebalk */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 13%;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    z-index: 20;
+}
+
+.navbar-background {
+    display: none;
+    width: 200vw;
+    z-index: -1;
+    position: fixed;
+    height: 30vh;
+    background-color: black;
+    opacity: 40%;
+    filter: blur(50px);
+    margin-top: -15vh;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 1vw;
+    margin-top: 6.2vh;
+    margin-right: 4vw;
+    height: 3vh;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+}
+
+.nav a:hover {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.836);
+    transition: 0.3s;
+}
+
+.dropdownbtn {
+    color: white;
+    border: none;
+    font-family: Poppins;
+    font-weight: 300;
+    text-align: center;
+    margin-right: 3.7vw;
+    margin-left: 0vw;
+    margin-top: 6.05vh;
+    font-size: 1vw;
+    background: none;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+}
+
+.dropdownbtn i {
+    margin-left: 0.2vw;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    width: 13vw;
+    height: 27vh;
+    z-index: 1;
+    transition: 0.4s;
+    opacity: 0%;
+    backdrop-filter: blur(1.2px);
+    -webkit-backdrop-filter: blur(1.2px);
+}
+
+.dropdown-content a {
+    color: white;
+    margin-left: 0.3vw;
+    margin-top: 2vh;
+    text-decoration: none;
+    display: block;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    width: 13vw;
+}
+
+.dropdown-content a:hover {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.836);
+    transition: 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 100%;
+    visibility: visible;
+}
+
+.dropdown:hover .dropdownbtn {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.836);
+    transition: 0.3s;
+}
+
+.logo {
+    display: flex;
+    padding-right: 10vw;
+}
+
+.logo a {
+    display: flex;
+    margin-top: 0;
+}
+
+.logo h1 {
+    font-family: Poppins;
+    font-weight: 300;
+    color: white;
+    font-size: 0.8vw;
+    letter-spacing: 0.2vw;
+    line-height: 0.9vw;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+    padding-top: 6.3vh;
+}
+
+#logo {
+    width: 8vw;
+    height: 16vh;
+}
+
+/* De pagina achtergrond */
+
+.background {
+    margin-top: 4vh;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.background img {
+    width: 100vw;
+}
+
+#img1 {
+    position: absolute;
+    z-index: 3;
+    animation: fade 15s -0s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#img2 {
+    position: absolute;
+    z-index: 2;
+    animation: fade 15s -5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#img3 {
+    position: absolute;
+    z-index: 1;
+    animation: fade 15s -10s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    53% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.scroll {
+    width: 0;
+    height: 0;
+}
+
+.scroll img {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    left: 48vw;
+    top: 45vw;
+    transition: 0.2s;
+    width: 4vw;
+    height: 4vw;
+}
+
+/* Korte stuk info over de artiest */
+
+.short-info {
+    width: 100vw;
+    height: 82vh;
+    z-index: 10;
+    background: #fcfaf9;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+    top: 100vh;
+    position: relative;
+}
+
+.info-text {
+    display: grid;
+    width: 30.5vw;
+    justify-items: center;
+    position: absolute;
+    left: 16vw;
+    margin-top: 7vh;
+}
+
+.kop {
+    width: 30.5vw;
+    margin-bottom: 3vh;
+}
+
+.info-text h2 {
+    font-family: Poppins;
+    font-weight: 400;
+    color: var(--textbruin);
+    font-size: 1.8vw;
+}
+
+hr {
+    width: 28.6vw;
+    height: 0.11vh;
+    background-color: var(--textbruin);
+    border: 0 none;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+#rayshree {
+    color: var(--accentbruin);
+    background: none;
+}
+
+.info-text p {
+    font-family: Poppins;
+    font-weight: 300;
+    text-align: center;
+    width: 28vw;
+    font-size: 1vw;
+}
+
+.short-info-pic img {
+    width: 27.8vw;
+    left: 56.3vw;
+    position: absolute;
+    bottom: 7.5vh;
+}
+
+#lees-verder {
+    margin-top: 2.2vh;
+    font-size: 1.1vw;
+    font-weight: 400;
+}
+
+#lees-verder a {
+    text-decoration: none;
+    color: var(--accentbruin);
+}
+
+#lees-verder-line {
+    width: 5.3vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-top: 0.3vh;
+    margin-left: 0vw;
+}
+
+/* Dienstensectie in de voorpagina */
+
+.diensten-content {
+    padding-top: 100vh;
+
+}
+
+.diensten-content-fotos {
+    display: flex;
+    justify-content: center;
+    margin-top: -10vh;
+}
+
+.diensten-content-fotos img {
+    width: 20vw;
+    opacity: 40%;
+    object-fit: fill;
+    transition: all 1s ease-out;
+}
+
+.diensten-content-fotos a {
+    text-decoration: none;
+    color: white;
+}
+
+.dienst {
+    color: white;
+    text-align: center;
+    overflow: hidden
+}
+
+.diensten-content-fotos img:hover {
+    opacity: 60%;
+    transform: scale(1.2);
+}
+
+.haardienst {
+    color: white;
+    text-align: center;
+    margin-top: -3vh;
+    overflow: hidden
+}
+
+#dienstkop {
+    font-family: Montserrat;
+    font-weight: 800;
+    position: relative;
+    top: 40vh;
+    z-index: 1;
+    line-height: 3vh;
+    font-size: 1.6vw;
+    pointer-events: none;
+}
+
+#haartext {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 1.2vw;
+    position: relative;
+    top: 41.8vh;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#haarkop {
+    font-family: Montserrat;
+    font-weight: 800;
+    position: relative;
+    top: 41.5vh;
+    z-index: 1;
+    line-height: 3vh;
+    font-size: 1.6vw;
+    pointer-events: none;
+}
+
+#haardiensttext {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 0.8vw;
+    position: relative;
+    top: 42.5vh;
+    z-index: 1;
+    margin-top: 1vh;
+    pointer-events: none;
+}
+
+#diensttext {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 0.8vw;
+    position: relative;
+    top: 41vh;
+    z-index: 1;
+    margin-top: 1vh;
+    pointer-events: none;
+}
+
+/* Foto-slider in de voorpagina */
+
+.swiper {
+    width: 100vw;
+    height: 36vh;
+}
+
+.swiper-slide {
+    width: 150vw;
+    height: 300vh;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 18vw;
+    height: 36vh;
+    object-fit: cover;
+    margin-left: -2vw;
+
+}
+
+.slider-container {
+    z-index: 3;
+    position: relative;
+    margin-top: -1vh;
+    padding-top: 5vh;
+    width: 100vw;
+    height: 46vh;
+    background-color: var(--offwhite);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+}
+
+#zie-meer {
+    margin-top: 2.2vh;
+    font-size: 1.1vw;
+    font-weight: 400;
+    font-family: Poppins;
+    color: var(--accentbruin);
+}
+
+#zie-meer-line {
+    width: 4vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-top: 0.2vh;
+    margin-left: 0.4vw;
+}
+
+.zie-meer {
+    position: relative;
+    left: 47.6vw;
+    top: 1vh;
+    width: 5vw;
+}
+
+.zie-meer a {
+    text-decoration: none;
+    color: var(--accentbruin);
+}
+
+/* De footer */
+
+.footer-content {
+    width: 100vw;
+    height: 35vh;
+    background-color: var(--darkbruin);
+}
+
+.footer-logo {
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    margin-top: -21vh;
+}
+
+.footer-logo a {
+    text-decoration: none;
+}
+
+.footer-logo img {
+    width: 8vw;
+    padding-left: 0.4vw;
+}
+
+#adres {
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    color: var(--accentbruin);
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 1vw;
+    padding-top: 1.8vh;
+}
+
+#footer-logo-text {
+    text-align: center;
+    width: 9vw;
+    font-size: 0.8vw;
+    font-family: Poppins;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 0.2vw;
+    line-height: 0.9vw;
+    margin-top: -2vh;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+}
+
+.footer-content li {
+    color: white;
+    list-style: none;
+    font-family: Poppins;
+    font-size: 0.9vw;
+    text-align: center;
+    line-height: 3.5vh;
+}
+
+.footer-content ul {
+    padding-top: 1.5vh;
+}
+
+.footer-content li img {
+    width: 0.7vw;
+    padding-right: 0.2vw;
+}
+
+#phone {
+    padding-right: 1vw;
+}
+
+.footersectie {
+    position: relative;
+    width: 20vw;
+    padding-top: 5vh;
+    padding-left: 11vw;
+}
+
+#footersectie-kop {
+    color: var(--accentbruin);
+    font-family: Poppins;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.1vw;
+    padding-left: 2.4vw;
+}
+
+#footersectie-line {
+    width: 8.5vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-top: 0.2vh;
+    margin-left: 7vw;
+}
+
+#instagramsvg {
+    position: relative;
+    top: 0.3vh;
+}
+
+#instagram {
+    padding-right: 1vw;
+}
+
+#facebook {
+    padding-right: 0.3vw;
+}
+
+#diensten-kop {
+    color: var(--accentbruin);
+    font-family: Poppins;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.1vw;
+    padding-left: 2.4vw;
+}
+
+#diensten-line {
+    width: 4.2vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-top: 0.2vh;
+    margin-left: 9.1vw;
+}
+
+.footer-diensten {
+    padding-right: 1vw;
+}
+
+#footer-diensten {
+    position: relative;
+    left: 56vw;
+    margin-top: -26.5vh;
+}
+
+#footer-diensten a {
+    text-decoration: none;
+    color: white;
+}
+
+#copyright {
+    color: white;
+    font-family: Poppins;
+    width: 100vw;
+    font-size: 0.7vw;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+/* Portfolio sectie */
+
+.portfolio {
+    width: 100vw;
+    background-color: var(--offwhite);
+    height: 185vh;
+    z-index: 2;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+    position: relative;
+    margin-top: -68vh;
+}
+
+.portfolio-background img {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.page-kop {
+    display: grid;
+    justify-content: center;
+    padding-top: 2.5vh;
+}
+
+.page-kop p {
+    font-family: Poppins;
+    font-weight: 400;
+    color: var(--accentbruin);
+    font-size: 1.5vw;
+}
+
+.page-kop hr {
+    width: 5.5vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-top: 0vh;
+    margin-left: 0.3vw;
+}
+
+.container {
+    overflow: hidden;
+    width: 80vw;
+    padding-left: 9.9vw;
+    padding-top: 1vh;
+}
+
+.filterDiv {
+    display: none;
+    float: inline-start;
+    width: 18vw;
+    text-align: center;
+    margin: 1vw;
+}
+
+.filterDiv img {
+    width: 18vw;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    font-family: Poppins;
+    color: var(--textbruin);
+    padding-left: 1vw;
+    opacity: 50%;
+    transition: 0.2s;
+    font-size: 1vw;
+}
+
+#myBtnContainer {
+    padding-left: 22.7vw;
+    padding-top: 3vh;
+}
+
+.btn:hover {
+    opacity: 100%;
+}
+
+.btn.active {
+    opacity: 100%;
+}
+
+.portfolio-navbg {
+    display: none;
+    width: 200vw;
+    z-index: -1;
+    position: fixed;
+    height: 30vh;
+    background-color: black;
+    opacity: 40%;
+    filter: blur(50px);
+    margin-top: -15vh;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 21;
+}
+
+.modal-content {
+    margin-top: -7vh;
+    margin-left: 61.5vh;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    font-family: Poppins;
+}
+
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* De contactpagina */
+
+.contact-background img {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.contact-page {
+    width: 100vw;
+    background-color: var(--offwhite);
+    height: 128vh;
+    z-index: 2;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+    position: relative;
+    margin-top: -85vh;
+}
+
+#contact-naam {
+    font-family: Poppins;
+    font-weight: 500;
+    color: var(--textbruin);
+    font-size: 1.8vw;
+    text-align: center;
+}
+
+#contact-adres {
+    font-family: Poppins;
+    font-weight: 500;
+    color: var(--textbruin);
+    font-size: 1.3vw;
+    line-height: 2vh;
+    text-align: center;
+}
+
+.main-contact {
+    position: relative;
+    right: 22vw;
+    top: 9vh;
+}
+
+.main-contact p {
+    font-family: Poppins;
+    font-weight: 300;
+    text-align: center;
+    width: 28vw;
+    font-size: 1vw;
+    width: 30vw;
+    padding-left: 35vw;
+    padding-top: 3vh;
+}
+
+.contact-phone {
+    position: relative;
+    left: 0.3vw;
+    margin-top: -3vh;
+    text-align: center;
+    color: var(--accentbruin);
+}
+
+.contact-phone p {
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.contact-phone img {
+    position: relative;
+    top: 6.22vh;
+    right: 4.5vw;
+    width: 0.8vw;
+}
+
+.contact-email {
+    position: relative;
+    left: 0.8vw;
+    margin-top: -4.2vh;
+    text-align: center;
+    color: var(--accentbruin);
+}
+
+.contact-email p {
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.contact-email img {
+    position: relative;
+    top: 6.2vh;
+    right: 8.2vw;
+    width: 0.8vw;
+}
+
+.mapouter {
+    position: relative;
+    float: right;
+    bottom: 32.5vh;
+    right: 15vw;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+}
+
+.contact-form {
+    position: relative;
+    top: 30vh;
+}
+
+.contact-form p {
+    font-weight: 300;
+    font-size: 1vw;
+    font-family: Poppins;
+    width: 35vw;
+    text-align: center;
+}
+
+.contact-form input {
+    display: flex;
+    width: 30vw;
+    height: 5vh;
+    padding-left: 1vw;
+    margin-left: 2.15vw;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    backdrop-filter: blur(22.0221004486084px);
+    --webkit-backdrop-filter: blur(22.0221004486084px);
+    background-color: rgba(0, 0, 0, 0.08);
+    font-family: Poppins;
+}
+
+.contact-form textarea {
+    display: flex;
+    width: 30vw;
+    height: 20vh;
+    font-size: 1vw;
+    padding-top: 1vh;
+    padding-left: 1vw;
+    margin-left: 2.15vw;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    backdrop-filter: blur(22.0221004486084px);
+    --webkit-backdrop-filter: blur(22.0221004486084px);
+    background-color: rgba(0, 0, 0, 0.08);
+    font-family: Poppins;
+    resize: none;
+}
+
+.contact-form button {
+    display: flex;
+    border-radius: 7px;
+    background: var(--accentbruin);
+    border: none;
+    width: 7vw;
+    height: 4.4vh;
+    color: white;
+    padding-left: 0.9vw;
+    padding-top: 0.85vh;
+    position: relative;
+    left: 14vw;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    color: var(--accentbruin);
+    background: none;
+    border: solid var(--accentbruin) 0.1vw;
+    padding-left: 0.7;
+}
+
+.contact-form {
+    position: relative;
+    left: 32.3vw;
+    width: 10vw;
+    margin-top: -5vh;
+}
+
+.contact-navbg {
+    display: none;
+    width: 200vw;
+    z-index: -1;
+    position: fixed;
+    height: 30vh;
+    background-color: black;
+    opacity: 40%;
+    filter: blur(50px);
+    margin-top: -15vh;
+}
+
+/* De tarievenpagina */
+
+.tarieven-background img {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.tarieven {
+    width: 100vw;
+    background-color: var(--offwhite);
+    height: 115vh;
+    z-index: 2;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+    position: relative;
+    margin-top: -85vh;
+}
+
+.tarieven-tabel {
+    position: relative;
+    top: 3.5vh;
+    left: 16vw;
+    width: 30vw;
+}
+
+table {
+    font-size: 1.05vw;
+    line-height: 8vh;
+    border-collapse: collapse;
+    width: 30vw;
+    margin-left: 3vw;
+}
+
+th {
+    font-family: Poppins;
+    text-align: left;
+    font-weight: 400;
+    color: var(--accentbruin);
+    padding-right: 12vw;
+}
+
+td {
+    font-family: Poppins;
+    font-weight: 400;
+    color: var(--textbruin);
+    text-align: right;
+}
+
+tr {
+    border-top: 1px solid var(--accentbruin);
+    border-bottom: 1px solid var(--accentbruin);
+}
+
+#tarieven-kop {
+    font-family: Poppins;
+    font-weight: 400;
+    color: var(--accentbruin);
+    font-size: 1.5vw;
+    position: relative;
+    left: 14.5vw;
+    margin-bottom: 2vh;
+}
+
+.tarieven-pic {
+    display: flex;
+    position: absolute;
+    bottom: 29vh;
+    left: 58vw;
+}
+
+.tarieven-pic img {
+    width: 22vw;
+}
+
+.tarieven-tabel p {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 0.8vw;
+    text-align: left;
+    width: 40vw;
+    margin-top: 2vh;
+    margin-left: 0vw;
+}
+
+#interesse {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1vw;
+    text-align: left;
+    width: 70vw;
+    margin-top: 6.2vh;
+    display: block;
+    margin-left: 12vw;
+}
+
+#interesse mark {
+    background: none;
+    color: var(--accentbruin);
+}
+
+/* De about-me page */
+
+.about-me-background img {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.about-me {
+    width: 100vw;
+    background-color: var(--offwhite);
+    height: 115vh;
+    z-index: 2;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+    position: relative;
+    margin-top: -101vh;
+}
+
+#about-me-kop-line {
+    width: 6.3vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-top: 0vh;
+    margin-left: 0.4vw;
+}
+
+.about-me-text {
+    position: relative;
+    left: 20vw;
+    top: 3vh;
+    width: 28vw;
+}
+
+.about-me-text p {
+    font-family: Poppins;
+    font-weight: 300;
+    text-align: center;
+    width: 28vw;
+    font-size: 1vw;
+}
+
+.about-me-page-kop {
+    padding-top: 4vh;
+    position: relative;
+    left: 30vw;
+    width: 7.5vw;
+}
+
+.about-me-page-kop p {
+    font-family: Poppins;
+    font-weight: 400;
+    color: var(--accentbruin);
+    font-size: 1.5vw;
+}
+
+.about-me-pic {
+    width: 10vw;
+    position: relative;
+    left: 56vw;
+    margin-top: -78vh;
+}
+
+.about-me-pic img {
+    width: 23vw;
+}
+
+.about-me-socials {
+    width: 30vw;
+    position: relative;
+    left: 6.2vw;
+    margin-top: 2vh;
+}
+
+.about-me-socials img {
+    width: 2vw;
+    margin-right: 1.5vw;
+}
+
+#about-me-mail {
+    margin-bottom: 0.3vh;
+}
+
+.about-me-socials a {
+    text-decoration: none;
+}
+
+.about-me-content #interesse {
+    position: relative;
+    left: 21.5vw;
+    top: 6vh;
+    width: 35vw;
+}
+
+.about-me-content #interesse a {
+    color: var(--darkbruin);
+}
+
+/* Bruidshaar & Make-Up */
+
+.bridal-background img{
+    margin-top: -5vh;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.dienstpage {
+    width: 100vw;
+    background-color: var(--offwhite);
+    height: 167vh;
+    z-index: 2;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+    position: relative;
+    margin-top: -8vh;
+}
+
+.dienst-kop1 {
+    width: 30.5vw;
+    margin-bottom: 3vh;
+}
+
+.dienst-kop1 h2 {
+    font-family: Poppins;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: var(--accentbruin);
+}
+
+.dienst-kop1 hr {
+    width: 23.85vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-left: 0.7vw;
+    margin-top: 1.2vh;
+}
+
+.dienst-text1 p {
+    width: 25vw;
+    font-family: Poppins;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+.dienst-pic1 img {
+    width: 30vw;
+    margin-top: 1vh;
+    margin-left: 3vw;
+}
+
+.dienst-sectie {
+    display: flex;
+    justify-content: center;
+    padding-top: 6vh;
+    padding-bottom: 3vh;
+}
+
+.dienst-pic2 img {
+    width: 30vw;
+    margin-top: 1vh;
+    padding-right: 12.5vw;
+}
+
+.dienst-kop2 {
+    width: 17.5vw;
+    margin-bottom: 3vh;
+    margin-left: 4vw;
+}
+
+.dienst-kop2 h2 {
+    font-family: Poppins;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: var(--accentbruin);
+}
+
+.dienst-kop2 hr {
+    width: 15.2vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-left: 0.7vw;
+    margin-top: 1.1vh;
+}
+
+.dienst-text2 p {
+    width: 25vw;
+    font-family: Poppins;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+.dienst-text2 p {
+    width: 25vw;
+    font-family: Poppins;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+.dienst-text2 {
+    position: relative;
+    right: 4vw;
+}
+
+.dienstpage-content #interesse {
+    position: relative;
+    left: 16vw;
+}
+
+/* Indische Haar & Make-Up */
+
+.indian-background img{
+    margin-top: -6vh;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+#indian .dienst-kop1 hr {
+    width: 16.7vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-left: 0.7vw;
+    margin-top: 1.1vh;
+}
+
+#indian .dienst-kop1 {
+    width: 30.5vw;
+    margin-bottom: 3vh;
+    margin-left: 3.7vw;
+}
+
+#indian .dienst-text1 p {
+    width: 26vw;
+    font-family: Poppins;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+#indian .dienst-text2 {
+    margin-left: 3vw;
+}
+
+#indian .dienst-pic1 img {
+    width: 29vw;
+    margin-top: 1vh;
+    margin-left: 0vw;
+}
+
+#indian .dienst-pic2 img {
+    width: 28.7vw;
+    margin-top: 1vh;
+    position: relative;
+    left: 4vw;
+}
+
+#indian .dienst-kop2 {
+    margin-left: 5.9vw;
+}
+
+#indian .dienst-kop2 hr {
+    width: 13.5vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-left: 0.7vw;
+    margin-top: 1.1vh;
+}
+
+#indian .dienst-text2 p {
+    width: 27vw;
+    font-family: Poppins;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 300;
+    margin-right: 2.5vw;
+}
+
+#indian .dienst-text2 a {
+    color: black;
+}
+
+#indian .dienstpage {
+    height: 135vh;
+    margin-top: -5vh;
+}
+
+/* Party Haar & Make-Up */
+
+.party-background img{
+    margin-top: -5.6vh;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+#party .dienst-kop1 hr {
+    width: 28.7vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-left: 0.7vw;
+    margin-top: 1.2vh;
+}
+
+#party .dienst-kop1 {
+    width: 30.5vw;
+    margin-bottom: 3vh;
+    margin-left: 3vw;
+}
+
+#party .dienst-text1 p {
+    width: 36vw;
+    font-family: Poppins;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+#party .dienst-pic1 img {
+    width: 32vw;
+    margin-top: 1vh;
+    margin-left: 5vw;
+}
+
+#party .dienst-kop2 {
+    margin-left: 7.5vw;
+}
+
+#party .dienst-kop2 hr {
+    width: 12.9vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-left: 0.7vw;
+    margin-top: 1.1vh;
+}
+
+#party .dienst-text2 p {
+    width: 30vw;
+    font-family: Poppins;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 300;
+    margin-right: 2.5vw;
+}
+
+#party .dienst-text2 {
+    margin-left: 4.5vw;
+}
+
+#party .dienst-pic2 img {
+    width: 34.6vw;
+    position: relative;
+    left: 6vw;
+}
+
+#party .dienstpage {
+    height: 135vh;
+    margin-top: -6vh;
+}
+
+#party #interesse {
+    position: relative;
+    left: 16vw;
+}
+
+/* Haar behandelingen */
+
+.hair-background img{
+    margin-top: -5.5vh;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+#hair .dienstpage {
+    width: 100vw;
+    background-color: var(--offwhite);
+    height: 255vh;
+    z-index: 2;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+    position: relative;
+    margin-top: -8vh;
+}
+
+#hair .dienst-kop1 hr {
+    width: 21.2vw;
+    margin-top: 1.4vh;
+}
+
+#hair .dienst-kop1 {
+    margin-left: 1.1vw;
+}
+
+#hair .dienst-kop2 hr {
+    width: 13.7vw;
+    margin-top: 0.9vh;
+}
+
+#hair .dienst-kop2 {
+    margin-left: 6.3vw;
+}
+
+#hair .dienst-text2 p {
+    width: 27.8vw;
+}
+
+#hair .dienst-text2 {
+    margin-left: 2.3vw;
+}
+
+#hair .dienst-pic2 img {
+    width: 27.2vw;
+    position: relative;
+    left: 1.8vw;
+}
+
+.dienst-text3 {
+    position: relative;
+    right: 6.8vw;
+}
+
+.dienst-text3 p {
+    width: 31vw;
+    font-family: Poppins;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 300;
+    margin-left: 3.6vw;
+}
+
+.dienst-kop3 {
+    width: 30.5vw;
+    margin-bottom: 3vh;
+    margin-left: 10vw;
+}
+
+.dienst-kop3 h2 {
+    font-family: Poppins;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: var(--accentbruin);
+}
+
+.dienst-kop3 hr {
+    width: 17.5vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-left: 0.7vw;
+    margin-top: 1.2vh;
+}
+
+.dienst-pic3 img {
+    width: 29vw;
+    margin-left: -6.5vw;
+}
+
+.dienst-text4 {
+    position: relative;
+    margin-left: 5vw;
+}
+
+.dienst-text4 p {
+    width: 30vw;
+    font-family: Poppins;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 300;
+    margin-left: 3.6vw;
+}
+
+.dienst-kop4 {
+    width: 30.5vw;
+    margin-bottom: 3vh;
+    margin-left: 7.2vw;
+}
+
+.dienst-kop4 h2 {
+    font-family: Poppins;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: var(--accentbruin);
+}
+
+.dienst-kop4 hr {
+    width: 21.7vw;
+    height: 0.11vh;
+    background-color: var(--accentbruin);
+    border: 0 none;
+    margin-left: 0.7vw;
+    margin-top: 1.4vh;
+}
+
+.dienst-pic4 img {
+    width: 27.5vw;
+    position: relative;
+    left: 2vw;
+}
+
+/* Visagie Workshops */
+
+#workshops .dienstpage {
+    height: 255vh;
+}
+
+#workshops .dienst-kop1 hr {
+    width: 16.5vw;
+    margin-top: 0.8vh;
+}
+
+#workshops .dienst-kop1 {
+    margin-left: 4vw;
+}
+
+#workshops .dienst-text1 p {
+    width: 26vw;
+}
+
+#workshops .dienst-pic1 img {
+    width: 28vw;
+    margin-left: -1vw;
+}
+
+#workshops .dienst-kop2 hr {
+    width: 14.1vw;
+    margin-top: 0.4vw;
+}
+
+#workshops .dienst-kop2 {
+    margin-left: 6.2vw;
+}
+
+#workshops .dienst-text2 p {
+    width: 28vw;
+}
+
+#workshops .dienst-text2 {
+    margin-left: 4vw;
+}
+
+#workshops .dienst-pic2 img {
+    width: 25.2vw;
+    position: relative;
+    left: 4vw;
+}
+
+#workshops .dienst-kop3 hr {
+    width: 16vw;
+    margin-top: 0.9vh;
+}
+
+#workshops .dienst-kop3 {
+    margin-left: 9vw;
+}
+
+#workshops .dienst-text3 p {
+    width: 28vw;
+}
+
+#workshops .dienst-text3 {
+    position: relative;
+    right: 6vw;
+}
+
+#workshops .dienst-pic3 img {
+    width: 27vw;
+    margin-left: -6vw;
+}
+
+#workshops .dienst-kop4 hr {
+    width: 15.4vw;
+    margin: 0.9vh;
+}
+
+#workshops .dienst-kop4 {
+    margin-left: 9.4vw;
+}
+
+#workshops .dienst-text4 p {
+    width: 28vw;
+}
+
+#workshops .dienst-text4 {
+    margin-left: 9.9vw;
+}
+
+#workshops .dienst-pic4 img {
+    position: relative;
+    left: 6vw;
+}
